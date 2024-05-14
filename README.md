@@ -3,8 +3,9 @@
 <H3>DATE:</H3>
 <H1 Align="center">Project Based Experiment<H1>
 <H3>Objective:<H3>
-Type your objective based on the question
+Perform sentiment analysis using your Facebook data and filter the data that has only neutral feedback for the code given in the following link.
 <H3>Program:</H3>
+```    
 import pandas as pd
 from textblob import TextBlob
 
@@ -21,6 +22,7 @@ df['Sentiment'] = df['FBPost'].apply(analyze_sentiment)
 
 # Filter the DataFrame to include only rows with neutral sentiment
 neutral_feedback = df[df['Sentiment'] == 0]  # Sentiment polarity of 0 indicates neutral sentiment
+```
 <H3>Output:</H3>
 
 ![Screenshot 2024-05-14 230936](https://github.com/Dhanashreemullaithasan/Project-Based-Experiment-AAI/assets/94165415/13f69a29-d296-4ded-827b-4f769a5f73ba)
